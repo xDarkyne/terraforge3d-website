@@ -3,6 +3,23 @@
  */
 
 /* SIZES */
+// maximum width for most elements
+$max-width: 1440px;
+// height for banner-like elements like headers or footers
+$banner-height: 4rem;
+// default border radius (corner roundness) for most elements
+$border-radius: 0.25rem;
 
 /* COLORS */
 $bg-primary: black;
+$bg-secondary: black;
+$bg-tertiary: black;
+$bg-selected: black;
+
+$fg-primary: white;
+$fg-secondary: white;
+$fg-tertiary: white;
+$fg-selected: white;
+
+$brand-bg-primary: orange;
+$brand-bg-secondary: orange;

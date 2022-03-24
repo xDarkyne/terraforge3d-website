@@ -1,0 +1,42 @@
+@import '../variables';
+
+.logo {
+  color: white;
+}
+
+.header {
+  height: $banner-height;
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  position: fixed;
+  left: 0;
+  right: 0;
+
+  nav {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  a {
+    height: 3rem;
+  }
+
+  img {
+    height: 100%;
+    cursor: pointer;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 5px;
+    list-style: none;
+  }
+}
+
+.navElement {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -3,15 +3,21 @@ import { metaData } from 'values';
 
 /**
  * Custom document. To change SEO elements like keywords, description or the author
- * please don't change them here. Change the metaData in the values directory.
+ * please don't change them here. Change the metaData in the values
  */
 class CustomDocument extends Document {
   render() {
     return (
       <Html>
         <Head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="true"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap"
             rel="stylesheet"
           />
           <meta name="description" content={metaData.description} />
