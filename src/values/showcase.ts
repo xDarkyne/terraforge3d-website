@@ -27,4 +27,11 @@ export interface IShowcaseItem {
  * The showcases here will be used to render them on the website and thus avoid
  * copy & paste and make adding or removing showcases easy.
  */
-export const showcase: IShowcaseItem[] = [];
+export const showcases: IShowcaseItem[] = [
+  {
+    imageUrl: '/image.png',
+    description: 'some description',
+    author: 'xDarkyne',
+    type: 'Cinematic',
+  },
+];
