@@ -1,8 +1,12 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 import { FormspreeForm } from 'components';
+import { showcases } from 'values';
 
 const Home: NextPage = () => {
+  const visibleShowcases = showcases.slice(0, 5);
+
   return (
     <>
       <Head>
@@ -38,6 +42,27 @@ const Home: NextPage = () => {
       </section>
       <section id="features">
         <div className="container"></div>
+      </section>
+      <section id="showcase">
+        <div className="container">
+          <h2>Showcase</h2>
+          <p>Add images on discord</p>
+          <ul className="showcase-grid">
+            {visibleShowcases.map((showcase, index) => (
+              <li key={index}>
+                <Image
+                  src={require(`../../public/images${showcase.imageUrl}`)}
+                  alt="text"
+                />
+                <div>
+                  <h3>{showcase.title}</h3>
+                  <p>{showcase.description}</p>
+                  <p>{showcase.author}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
       <section id="contact">
         <div className="container">

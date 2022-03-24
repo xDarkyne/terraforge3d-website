@@ -10,6 +10,7 @@ export type ShowcaseType = 'Concept Art' | 'Game Art' | 'Cinematic';
  */
 export interface IShowcaseItem {
   imageUrl: string;
+  title: string;
   description: string;
   author: string;
   type: ShowcaseType;
@@ -29,7 +30,43 @@ export interface IShowcaseItem {
  */
 export const showcases: IShowcaseItem[] = [
   {
-    imageUrl: '/image.png',
+    imageUrl: '/albedo.png',
+    title: 'some title',
+    description: 'some description',
+    author: 'xDarkyne',
+    type: 'Cinematic',
+  },
+  {
+    imageUrl: '/albedo.png',
+    title: 'some title',
+    description: 'some description',
+    author: 'xDarkyne',
+    type: 'Cinematic',
+  },
+  {
+    imageUrl: '/albedo.png',
+    title: 'some title',
+    description: 'some description',
+    author: 'xDarkyne',
+    type: 'Cinematic',
+  },
+  {
+    imageUrl: '/albedo.png',
+    title: 'some title',
+    description: 'some description',
+    author: 'xDarkyne',
+    type: 'Cinematic',
+  },
+  {
+    imageUrl: '/albedo.png',
+    title: 'some title',
+    description: 'some description',
+    author: 'xDarkyne',
+    type: 'Cinematic',
+  },
+  {
+    imageUrl: '/albedo.png',
+    title: 'some title',
     description: 'some description',
     author: 'xDarkyne',
     type: 'Cinematic',
