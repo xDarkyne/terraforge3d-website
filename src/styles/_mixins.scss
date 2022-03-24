@@ -1,0 +1,10 @@
+/*
+ * This file contains all mixins used for styling this site.
+ */
+
+/* MEDIA QUERIES */
+@mixin phone {
+  @media (max-width: 599px) {
+    @content;
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "name": "terraforge3d",
+  "version": "0.1.0",
+  "author": "xDarkyne <dev@darkyne.com> (https://darkyne.com)",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next build && next export",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "12.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.23",
+    "@types/react": "17.0.42",
+    "eslint": "8.11.0",
+    "eslint-config-next": "12.1.0",
+    "sass": "^1.49.9",
+    "typescript": "4.6.2"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "singleQuote": true,
+    "semi": true,
+    "printWidth": 80
+  },
+  "eslintConfig": {
+    "extends": "next/core-web-vitals",
+    "rules": {
+      "semi": "error",
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "block-spacing": [
+        "error",
+        "always"
+      ],
+      "comma-spacing": [
+        "error",
+        {
+          "before": false,
+          "after": true
+        }
+      ],
+      "arrow-parens": [
+        "error",
+        "always"
+      ],
+      "arrow-spacing": [
+        "error",
+        {
+          "before": true,
+          "after": true
+        }
+      ],
+      "eol-last": [
+        "error",
+        "always"
+      ]
+    }
+  }
+}
