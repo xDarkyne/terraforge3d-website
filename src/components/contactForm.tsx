@@ -1,6 +1,12 @@
 import { FunctionComponent, SyntheticEvent, useRef, useState } from 'react';
 
-export const ContactForm: FunctionComponent = () => {
+interface IContactFormProps {
+  formID: string;
+}
+
+export const ContactForm: FunctionComponent<IContactFormProps> = ({
+  formID,
+}) => {
   const form = useRef<HTMLFormElement>(null);
   const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>('');
@@ -9,7 +15,7 @@ export const ContactForm: FunctionComponent = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://formspree.io/f/mknyjgkz', {
+      const response = await fetch(`https://formspree.io/f/${formID}`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',

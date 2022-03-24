@@ -28,7 +28,7 @@ const Home: NextPage = () => {
       </section>
       <section id="contact">
         <div className="container">
-          <ContactForm />
+          <ContactForm formID="mknyjgkz" />
         </div>
       </section>
     </>
