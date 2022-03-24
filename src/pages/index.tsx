@@ -11,14 +11,27 @@ const Home: NextPage = () => {
       </Head>
 
       <section id="home">
+        <div className="overlay"></div>
         <div className="container">
           <div className="landing-hero">
             <div>
-              <h1>TERRAIN GENERATION FOR THE FUTURE</h1>
+              <h1>
+                TERRAIN GENERATION <span>FOR THE FUTURE</span>
+              </h1>
               <p>
                 procedural terrain generation. Amazing, flexible, open source.
               </p>
-              <a href="#">Learn More</a>
+              <div className="hero-flex-row">
+                <a className="appBtn" href="#">
+                  Learn More
+                </a>
+                <a className="appBtn" href="#">
+                  Star us on GitHub
+                </a>
+                <a className="appBtn" href="#">
+                  Download
+                </a>
+              </div>
             </div>
           </div>
         </div>

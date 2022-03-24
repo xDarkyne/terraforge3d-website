@@ -21,5 +21,12 @@ $fg-secondary: white;
 $fg-tertiary: white;
 $fg-selected: white;
 
-$brand-bg-primary: orange;
-$brand-bg-secondary: orange;
+$brand-bg-primary: #dc3545;
+$brand-bg-secondary: darken($brand-bg-primary, 10);
+
+/* OTHER */
+$shadow-light: 0 5px 5px
+  rgba(
+    $color: #000000,
+    $alpha: 0.8,
+  );

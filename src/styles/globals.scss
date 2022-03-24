@@ -1,9 +1,13 @@
 @import 'variables';
+@import 'mixins';
 
 html,
 body {
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 html {
@@ -14,7 +18,8 @@ html,
 body,
 #__next,
 main {
-  color: white;
+  background-color: $bg-primary;
+  color: $fg-primary;
   height: 100%;
   overflow-x: hidden;
 }
@@ -33,12 +38,46 @@ a {
 .container {
   max-width: $max-width;
   margin: 0 auto;
+  padding: 0 10px;
+}
+
+.appBtn {
+  height: fit-content;
+  width: fit-content;
+  display: inline-block;
+  background-color: $brand-bg-primary;
+  border-radius: $border-radius;
+  box-shadow: $shadow-light;
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 0.075ch;
+  padding: 10px 15px;
+  cursor: pointer;
+  appearance: none;
+
+  transition: background-color 250ms ease-out;
+
+  &:hover {
+    background-color: $brand-bg-secondary;
+  }
 }
 
 #home {
   background: rgba($color: #000000, $alpha: 0.8) url('/images/home.png');
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(315deg, #000 0%, #111 74%);
+  opacity: 0.75;
+  z-index: 1;
 }
 
 .landing-hero {
@@ -47,13 +86,45 @@ a {
   display: grid;
   place-items: center;
   text-align: center;
+  position: relative;
+  z-index: 5;
 
   h1 {
-    font-weight: 800;
-    font-size: 3.5em;
+    font-size: 2.5rem;
+    display: flex;
+    flex-direction: column;
+
+    span {
+      font-weight: 700;
+      font-size: 5rem;
+      background-color: #ffe53b;
+      background-image: linear-gradient(
+        315deg,
+        darken(#ffe53b, 5) 0%,
+        $brand-bg-primary 74%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   p {
     font-size: 2.3em;
+    margin-bottom: 20px;
+  }
+
+  .hero-flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+
+    @include phone {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
   }
 }

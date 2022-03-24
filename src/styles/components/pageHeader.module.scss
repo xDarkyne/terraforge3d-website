@@ -10,16 +10,13 @@
   position: fixed;
   left: 0;
   right: 0;
+  z-index: 999;
 
   nav {
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: space-between;
-  }
-
-  a {
-    height: 3rem;
   }
 
   img {
@@ -29,7 +26,7 @@
 
   nav ul {
     display: flex;
-    gap: 5px;
+    gap: 10px;
     list-style: none;
   }
 }
@@ -39,4 +36,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.navLinks {
+  a {
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+    transition: border-color 250ms;
+
+    &:hover {
+      border-color: $fg-selected;
+    }
+  }
+}
+
+.logo {
+  a {
+    height: 3rem;
+  }
 }

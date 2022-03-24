@@ -13,21 +13,36 @@ export const PageHeader: FunctionComponent = () => {
             </a>
           </Link>
         </div>
-        <ul className={styles.navElement}>
+        <ul className={`${styles.navElement} ${styles.navLinks}`}>
           <li>
-            <Link href="#home">home</Link>
+            <Link href="#home">Home</Link>
           </li>
           <li>
-            <Link href="#features">features</Link>
+            <Link href="#features">Features</Link>
           </li>
           <li>
-            <Link href="#contact">contact</Link>
+            <Link href="#showcase">Showcase</Link>
           </li>
           <li>
-            <Link href="#pricing">pricing</Link>
+            <Link href="#blog">Blog</Link>
           </li>
           <li>
-            <Link href="#showcase">showcase</Link>
+            <Link href="#pricing">Pricing</Link>
+          </li>
+          <li>
+            <Link href="#team">Team</Link>
+          </li>
+          <li>
+            <Link href="#contact">Contact</Link>
+          </li>
+          <li>
+            <Link href="#docs">Docs</Link>
+          </li>
+          <li>
+            <Link href="#github">GitHub</Link>
+          </li>
+          <li>
+            <Link href="#discord">Discord</Link>
           </li>
         </ul>
       </nav>
