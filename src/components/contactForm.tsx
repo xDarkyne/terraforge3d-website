@@ -2,10 +2,12 @@ import { FunctionComponent, SyntheticEvent, useRef, useState } from 'react';
 
 interface IContactFormProps {
   formID: string;
+  silent?: boolean;
 }
 
 export const ContactForm: FunctionComponent<IContactFormProps> = ({
   formID,
+  silent,
 }) => {
   const form = useRef<HTMLFormElement>(null);
   const [email, setEmail] = useState<string>('');
@@ -62,7 +64,7 @@ export const ContactForm: FunctionComponent<IContactFormProps> = ({
         />
       </label>
       <input type="submit" value="Send Message" />
-      <p id="my-form-status">{status}</p>
+      {!silent && <p id="my-form-status">{status}</p>}
     </form>
   );
 };
