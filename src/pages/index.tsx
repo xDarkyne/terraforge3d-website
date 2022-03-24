@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { ContactForm } from 'components';
+import { FormspreeForm } from 'components';
 
 const Home: NextPage = () => {
   return (
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
       </section>
       <section id="contact">
         <div className="container">
-          <ContactForm formID="mknyjgkz" />
+          <FormspreeForm formID="mknyjgkz" />
         </div>
       </section>
     </>

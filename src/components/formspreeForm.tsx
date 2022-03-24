@@ -1,11 +1,11 @@
 import { FunctionComponent, SyntheticEvent, useRef, useState } from 'react';
 
-interface IContactFormProps {
+interface IFormspreeFormProps {
   formID: string;
   silent?: boolean;
 }
 
-export const ContactForm: FunctionComponent<IContactFormProps> = ({
+export const FormspreeForm: FunctionComponent<IFormspreeFormProps> = ({
   formID,
   silent,
 }) => {
