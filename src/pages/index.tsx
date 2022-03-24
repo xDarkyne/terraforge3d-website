@@ -23,13 +23,13 @@ const Home: NextPage = () => {
               </p>
               <div className="hero-flex-row">
                 <a className="appBtn" href="#">
-                  Learn More
+                  Download now
                 </a>
                 <a className="appBtn" href="#">
                   Star us on GitHub
                 </a>
                 <a className="appBtn" href="#">
-                  Download
+                  Join us on Discord!
                 </a>
               </div>
             </div>
