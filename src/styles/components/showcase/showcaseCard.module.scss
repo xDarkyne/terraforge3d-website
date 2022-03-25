@@ -1,0 +1,17 @@
+@import '../../variables';
+
+.showcaseCard {
+  border-radius: $border-radius;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .showcaseCardBody {
+    margin-top: auto;
+  }
+}

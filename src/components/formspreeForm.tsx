@@ -11,10 +11,16 @@ export const FormspreeForm: FunctionComponent<IFormspreeFormProps> = ({
   silent,
   classNames,
 }) => {
+  /**
+   * Get the form element so we can interact with it.
+   * Example: resetting the form.
+   */
   const form = useRef<HTMLFormElement>(null);
+
   const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>('');
   const [status, setStatus] = useState<string>('');
+
   const submitHandler = async (e: SyntheticEvent) => {
     e.preventDefault();
 

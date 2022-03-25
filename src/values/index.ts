@@ -1,5 +1,8 @@
 export { metaData } from './meta';
 export type { IMetaData } from './meta';
 
-export { showcases } from './showcase';
-export type { IShowcaseItem } from './showcase';
+export { navLinks } from './navLinks';
+export type { INavLink } from './navLinks';
+
+export { showcases } from './showcases';
+export type { IShowcaseItem } from './showcases';

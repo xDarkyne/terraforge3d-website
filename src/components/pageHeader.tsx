@@ -1,6 +1,8 @@
 import styles from 'styles/components/pageHeader.module.scss';
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
+import { navLinks } from 'values';
+import { NavLink } from 'components';
 
 export const PageHeader: FunctionComponent = () => {
   return (
@@ -14,36 +16,9 @@ export const PageHeader: FunctionComponent = () => {
           </Link>
         </div>
         <ul className={`${styles.navElement} ${styles.navLinks}`}>
-          <li>
-            <Link href="#home">Home</Link>
-          </li>
-          <li>
-            <Link href="#features">Features</Link>
-          </li>
-          <li>
-            <Link href="#showcase">Showcase</Link>
-          </li>
-          <li>
-            <Link href="#blog">Blog</Link>
-          </li>
-          <li>
-            <Link href="#pricing">Pricing</Link>
-          </li>
-          <li>
-            <Link href="#team">Team</Link>
-          </li>
-          <li>
-            <Link href="#contact">Contact</Link>
-          </li>
-          <li>
-            <Link href="#docs">Docs</Link>
-          </li>
-          <li>
-            <Link href="#github">GitHub</Link>
-          </li>
-          <li>
-            <Link href="#discord">Discord</Link>
-          </li>
+          {navLinks.map((navLink, index) => (
+            <NavLink key={index} navLink={navLink} />
+          ))}
         </ul>
       </nav>
     </header>

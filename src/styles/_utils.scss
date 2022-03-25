@@ -1,0 +1,36 @@
+@import 'variables';
+@import 'mixins';
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(315deg, #000 0%, #111 74%);
+  opacity: 0.75;
+  z-index: 1;
+}
+
+.appBtn {
+  height: fit-content;
+  width: fit-content;
+  display: inline-block;
+  color: $fg-primary;
+  background-color: $brand-bg-primary;
+  border-radius: $border-radius;
+  box-shadow: $shadow-light;
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 0.075ch;
+  padding: 10px 15px;
+  cursor: pointer;
+  appearance: none;
+  border: none;
+
+  transition: background-color 250ms ease-out;
+
+  &:hover {
+    background-color: $brand-bg-secondary;
+  }
+}

@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'mixins';
+@import 'utils';
 
 html,
 body {
@@ -10,10 +11,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 html,
 body,
 #__next,
@@ -22,6 +19,7 @@ main {
   color: $fg-primary;
   height: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -36,30 +34,18 @@ a {
 }
 
 .container {
+  height: 100%;
   max-width: $max-width;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 20px;
+
+  @include phone {
+    padding: 0 10px;
+  }
 }
 
-.appBtn {
-  height: fit-content;
-  width: fit-content;
-  display: inline-block;
-  background-color: $brand-bg-primary;
-  border-radius: $border-radius;
-  box-shadow: $shadow-light;
-  font-weight: bold;
-  font-size: 1.2rem;
-  letter-spacing: 0.075ch;
-  padding: 10px 15px;
-  cursor: pointer;
-  appearance: none;
-
-  transition: background-color 250ms ease-out;
-
-  &:hover {
-    background-color: $brand-bg-secondary;
-  }
+.section {
+  scroll-margin-top: $banner-height;
 }
 
 #home {
@@ -67,17 +53,6 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: linear-gradient(315deg, #000 0%, #111 74%);
-  opacity: 0.75;
-  z-index: 1;
 }
 
 .landing-hero {
@@ -125,25 +100,6 @@ a {
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-    }
-  }
-}
-
-.showcase-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 15px;
-  list-style: none;
-
-  li {
-    border-radius: $border-radius;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-
-    img {
-      height: 100%;
-      width: 100%;
     }
   }
 }

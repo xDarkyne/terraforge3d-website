@@ -1,34 +1,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
-import { FormspreeForm } from 'components';
-import { showcases } from 'values';
-import { useState } from 'react';
+import { FormspreeForm, ShowcaseGrid } from 'components';
 
 const Home: NextPage = () => {
-  const [visibleShowcases, setVisibleShowcases] = useState(
-    showcases.length < 5
-      ? showcases.slice(0, showcases.length - 1)
-      : showcases.slice(0, 5)
-  );
-  const [canLoadMore, setCanLoadMore] = useState(
-    visibleShowcases.length < showcases.length
-  );
-  const loadMore = () => {
-    if (canLoadMore) {
-      let nextIndex =
-        showcases.length < 5
-          ? showcases.length - 1
-          : visibleShowcases.length + 4;
-      let cases = [
-        ...visibleShowcases,
-        ...showcases.slice(visibleShowcases.length - 1, nextIndex),
-      ];
-      setVisibleShowcases(cases);
-      setCanLoadMore(cases.length < showcases.length);
-    }
-  };
-
   return (
     <>
       <Head>
@@ -44,9 +18,8 @@ const Home: NextPage = () => {
               <h1>
                 TERRAIN GENERATION <span>FOR THE FUTURE</span>
               </h1>
-              <p>
-                procedural terrain generation. Amazing, flexible, open source.
-              </p>
+              <p>Procedural terrain generation.</p>
+              <p>Amazing, flexible, open source.</p>
               <div className="hero-flex-row">
                 <a className="appBtn" href="#">
                   Download now
@@ -63,29 +36,20 @@ const Home: NextPage = () => {
         </div>
       </section>
       <section id="features">
-        <div className="container"></div>
+        <div className="container">
+          <h2>Features</h2>
+        </div>
       </section>
-      <section id="showcase">
+      <section id="showcase" className="section">
         <div className="container">
           <h2>Showcase</h2>
           <p>Add images on discord</p>
-          <ul className="showcase-grid">
-            {visibleShowcases.map((showcase, index) => (
-              <li key={index}>
-                <Image
-                  src={require(`../../public/images${showcase.imageUrl}`)}
-                  alt="text"
-                  placeholder="blur"
-                />
-                <div>
-                  <h3>{showcase.title}</h3>
-                  <p>{showcase.description}</p>
-                  <p>{showcase.author}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
-          {canLoadMore ? <button onClick={loadMore}>Load More</button> : <></>}
+          <ShowcaseGrid />
+        </div>
+      </section>
+      <section id="pricing" className="section">
+        <div className="container">
+          <h2>Pricing</h2>
         </div>
       </section>
       <section id="contact">
