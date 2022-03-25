@@ -1,4 +1,4 @@
-ame: GitHub Pages deploy
+name: GitHub Pages deploy
 
 on:
   push:
