@@ -3,9 +3,31 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { FormspreeForm } from 'components';
 import { showcases } from 'values';
+import { useState } from 'react';
 
 const Home: NextPage = () => {
-  const visibleShowcases = showcases.slice(0, 5);
+  const [visibleShowcases, setVisibleShowcases] = useState(
+    showcases.length < 5
+      ? showcases.slice(0, showcases.length - 1)
+      : showcases.slice(0, 5)
+  );
+  const [canLoadMore, setCanLoadMore] = useState(
+    visibleShowcases.length < showcases.length
+  );
+  const loadMore = () => {
+    if (canLoadMore) {
+      let nextIndex =
+        showcases.length < 5
+          ? showcases.length - 1
+          : visibleShowcases.length + 4;
+      let cases = [
+        ...visibleShowcases,
+        ...showcases.slice(visibleShowcases.length - 1, nextIndex),
+      ];
+      setVisibleShowcases(cases);
+      setCanLoadMore(cases.length < showcases.length);
+    }
+  };
 
   return (
     <>
@@ -63,6 +85,7 @@ const Home: NextPage = () => {
               </li>
             ))}
           </ul>
+          {canLoadMore ? <button onClick={loadMore}>Load More</button> : <></>}
         </div>
       </section>
       <section id="contact">
