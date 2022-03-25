@@ -19,11 +19,6 @@
     justify-content: space-between;
   }
 
-  img {
-    height: 100%;
-    cursor: pointer;
-  }
-
   nav ul {
     display: flex;
     gap: 10px;
@@ -53,5 +48,17 @@
 .logo {
   a {
     height: 3rem;
+    display: block;
+    position: relative;
+
+    .logoImageContainer {
+      height: 100%;
+      max-width: 300px;
+      position: relative;
+
+      .logoImage {
+        height: 100%;
+      }
+    }
   }
 }

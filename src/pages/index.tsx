@@ -1,6 +1,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 import { FormspreeForm, ShowcaseGrid } from 'components';
+import background from '../../public/images/home.png';
 
 const Home: NextPage = () => {
   return (
@@ -11,6 +13,7 @@ const Home: NextPage = () => {
       </Head>
 
       <section id="home">
+        <Image src={background} layout="fill" alt="volcano" />
         <div className="overlay"></div>
         <div className="container">
           <div className="landing-hero">

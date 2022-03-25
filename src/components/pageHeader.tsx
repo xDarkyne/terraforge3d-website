@@ -1,8 +1,10 @@
 import styles from 'styles/components/pageHeader.module.scss';
 import { FunctionComponent } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { navLinks } from 'values';
 import { NavLink } from 'components';
+import logo from '../../public/images/logo.png';
 
 export const PageHeader: FunctionComponent = () => {
   return (
@@ -11,7 +13,13 @@ export const PageHeader: FunctionComponent = () => {
         <div className={`${styles.navElement} ${styles.logo}`}>
           <Link href="/">
             <a>
-              <img src="/images/logo.png" alt="" />
+              <div className={styles.logoImageContainer}>
+                <Image
+                  className={styles.logoImage}
+                  src={logo}
+                  alt="TerraForge3D Logo"
+                />
+              </div>
             </a>
           </Link>
         </div>
