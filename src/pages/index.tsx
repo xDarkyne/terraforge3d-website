@@ -67,7 +67,8 @@ const Home: NextPage = () => {
       </section>
       <section id="contact">
         <div className="container">
-          <FormspreeForm formID="mknyjgkz" />
+          <h2>Contact us</h2>
+          <FormspreeForm formID="mknyjgkz" classNames={['contactForm']} />
         </div>
       </section>
     </>

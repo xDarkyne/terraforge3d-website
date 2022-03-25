@@ -3,11 +3,13 @@ import { FunctionComponent, SyntheticEvent, useRef, useState } from 'react';
 interface IFormspreeFormProps {
   formID: string;
   silent?: boolean;
+  classNames?: string[];
 }
 
 export const FormspreeForm: FunctionComponent<IFormspreeFormProps> = ({
   formID,
   silent,
+  classNames,
 }) => {
   const form = useRef<HTMLFormElement>(null);
   const [email, setEmail] = useState<string>('');
@@ -44,7 +46,7 @@ export const FormspreeForm: FunctionComponent<IFormspreeFormProps> = ({
   };
 
   return (
-    <form ref={form} onSubmit={submitHandler}>
+    <form ref={form} onSubmit={submitHandler} className={classNames?.join(' ')}>
       <label htmlFor="email">
         Email:
         <input

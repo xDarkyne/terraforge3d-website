@@ -147,3 +147,21 @@ a {
     }
   }
 }
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      width: fit-content;
+    }
+  }
+
+  input[type='submit'] {
+    width: fit-content;
+  }
+}
