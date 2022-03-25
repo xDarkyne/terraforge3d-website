@@ -30,42 +30,42 @@ export interface IShowcaseItem {
  */
 export const showcases: IShowcaseItem[] = [
   {
-    imageUrl: '/albedo.png',
+    imageUrl: '/showcase/Snowy_Hills.png',
     title: 'some title',
     description: 'some description',
     author: 'xDarkyne',
     type: 'Cinematic',
   },
   {
-    imageUrl: '/albedo.png',
+    imageUrl: '/showcase/Muddy_Forest.png',
     title: 'some title',
     description: 'some description',
     author: 'xDarkyne',
     type: 'Cinematic',
   },
   {
-    imageUrl: '/albedo.png',
+    imageUrl: '/showcase/Desert_Vegetation.png',
     title: 'some title',
     description: 'some description',
     author: 'xDarkyne',
     type: 'Cinematic',
   },
   {
-    imageUrl: '/albedo.png',
+    imageUrl: '/showcase/Dry_Mountains.png',
     title: 'some title',
     description: 'some description',
     author: 'xDarkyne',
     type: 'Cinematic',
   },
   {
-    imageUrl: '/albedo.png',
+    imageUrl: '/showcase/Grassy_Hillock.png',
     title: 'some title',
     description: 'some description',
     author: 'xDarkyne',
     type: 'Cinematic',
   },
   {
-    imageUrl: '/albedo.png',
+    imageUrl: '/showcase/Moonland.png',
     title: 'some title',
     description: 'some description',
     author: 'xDarkyne',

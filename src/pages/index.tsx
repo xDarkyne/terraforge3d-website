@@ -53,6 +53,7 @@ const Home: NextPage = () => {
                 <Image
                   src={require(`../../public/images${showcase.imageUrl}`)}
                   alt="text"
+                  placeholder="blur"
                 />
                 <div>
                   <h3>{showcase.title}</h3>
