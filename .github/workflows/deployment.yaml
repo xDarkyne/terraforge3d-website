@@ -6,8 +6,6 @@ on:
 
 jobs:
   build:
-    env:
-      NODE_ENV: production
     runs-on: ubuntu-latest
 
     steps:
@@ -22,6 +20,8 @@ jobs:
         run: yarn install
 
       - name: Build my App
+        env:
+          NODE_ENV: production
         run: yarn export && touch ./out/.nojekyll
 
       - name: Deploy 🚀
