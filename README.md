@@ -2,6 +2,8 @@
   <h1>Terraforge3D Website</h1>
 </div>
 
+[Live Demo](https://xdarkyne.github.io/terraforge3d-website/)
+
 ## Setting up a local development environment
 
 > You need [NodeJS LTS (16)][nodejs] and [yarn][yarn] installed.
