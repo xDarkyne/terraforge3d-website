@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { navLinks } from 'values';
 import { NavLink } from 'components';
-import logo from '../../public/images/logo.png';
 
 export const PageHeader: FunctionComponent = () => {
   return (
@@ -16,7 +15,7 @@ export const PageHeader: FunctionComponent = () => {
               <div className={styles.logoImageContainer}>
                 <Image
                   className={styles.logoImage}
-                  src={logo}
+                  src={require('../../public/images/logo.png')}
                   alt="TerraForge3D Logo"
                 />
               </div>
