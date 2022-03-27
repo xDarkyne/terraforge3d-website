@@ -6,6 +6,7 @@ export interface IPricing {
   price: number;
   benefits: string[];
   joinUrl: string;
+  highlighted?: boolean;
 }
 
 /**
