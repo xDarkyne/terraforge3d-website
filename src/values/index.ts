@@ -1,3 +1,6 @@
+export { contributors } from './contributors';
+export type { IContributor } from './contributors';
+
 export { metaData } from './meta';
 export type { IMetaData } from './meta';
 
