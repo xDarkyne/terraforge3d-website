@@ -28,8 +28,8 @@ export const navLinks: INavLink[] = [
     destination: '#pricing',
   },
   {
-    value: 'Team',
-    destination: '#team',
+    value: 'Contributors',
+    destination: '#contributors',
   },
   {
     value: 'Contact',
