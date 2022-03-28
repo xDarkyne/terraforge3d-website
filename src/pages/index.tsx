@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section id="home">
+      <section aria-labelledby="home-title" id="home">
         <Image
           src={require('../../public/images/home.png')}
           layout="fill"
@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         <div className="container">
           <div className="landing-hero">
             <div>
-              <h1>
+              <h1 id="home-title">
                 TERRAIN GENERATION <span>FOR THE FUTURE</span>
               </h1>
               <p>Procedural terrain generation.</p>
@@ -42,21 +42,32 @@ const Home: NextPage = () => {
           </div>
         </div>
       </section>
-      <section id="features">
+
+      <section
+        aria-labelledby="features-title"
+        id="features"
+        className="section"
+      >
         <div className="container">
-          <h2>Features</h2>
+          <h2 id="features-title">Features</h2>
         </div>
       </section>
-      <section id="showcase" className="section">
+
+      <section
+        aria-labelledby="showcase-title"
+        id="showcase"
+        className="section"
+      >
         <div className="container">
-          <h2>Showcase</h2>
+          <h2 id="showcase-title">Showcase</h2>
           <p>Add images on discord</p>
           <ShowcaseGrid />
         </div>
       </section>
-      <section id="pricing" className="section">
+
+      <section aria-labelledby="pricing-title" id="pricing" className="section">
         <div className="container">
-          <h2>Pricing</h2>
+          <h2 id="pricing-title">Pricing</h2>
           <ul>
             {pricing.map((pricing, index) => (
               <li
@@ -78,9 +89,14 @@ const Home: NextPage = () => {
           </ul>
         </div>
       </section>
-      <section id="contributors">
+
+      <section
+        aria-labelledby="contributors-title"
+        id="contributors"
+        className="section"
+      >
         <div className="container">
-          <h2>Contributors</h2>
+          <h2 id="contributors-title">Contributors</h2>
           <ul>
             {contributors.map((contributor, index) => (
               <li key={index} className="contributorCard">
@@ -92,9 +108,10 @@ const Home: NextPage = () => {
           </ul>
         </div>
       </section>
-      <section id="contact">
+
+      <section aria-labelledby="contact-title" id="contact" className="section">
         <div className="container">
-          <h2>Contact us</h2>
+          <h2 id="contact-title">Contact us</h2>
           <FormspreeForm formID="mknyjgkz" classNames={['contactForm']} />
         </div>
       </section>
