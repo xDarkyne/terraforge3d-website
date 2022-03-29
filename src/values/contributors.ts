@@ -5,7 +5,8 @@ export interface IContributor {
   name: string;
   avatar: string;
   githubUrl: string;
-  extraUrl: string;
+  title?: string;
+  extraUrl?: string;
 }
 
 /**
