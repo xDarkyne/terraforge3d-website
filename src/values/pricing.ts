@@ -20,4 +20,17 @@ export const pricing: IPricing[] = [
     benefits: ['benefit 1', 'benefit 2', 'benefit 3'],
     joinUrl: 'some url',
   },
+  {
+    tierName: 'Ultra',
+    price: 20,
+    benefits: ['benefit 1', 'benefit 2', 'benefit 3', 'benefit 4'],
+    joinUrl: 'some url',
+    highlighted: true,
+  },
+  {
+    tierName: 'Pro',
+    price: 15,
+    benefits: ['benefit 1', 'benefit 2', 'benefit 3'],
+    joinUrl: 'some url',
+  },
 ];
