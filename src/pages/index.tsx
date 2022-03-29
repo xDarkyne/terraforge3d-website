@@ -2,7 +2,8 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import { FormspreeForm, ShowcaseGrid } from 'components';
-import { contributors, pricing } from 'values';
+import { contributors } from 'values';
+import { PricingGrid } from 'components/pricing';
 
 const Home: NextPage = () => {
   return (
@@ -68,25 +69,7 @@ const Home: NextPage = () => {
       <section aria-labelledby="pricing-title" id="pricing" className="section">
         <div className="container">
           <h2 id="pricing-title">Pricing</h2>
-          <ul>
-            {pricing.map((pricing, index) => (
-              <li
-                key={index}
-                className={`pricingCard ${
-                  pricing.highlighted ? 'pricingHighlighted' : ''
-                }`}
-              >
-                <h3>{pricing.tierName}</h3>
-                <ul>
-                  {pricing.benefits.map((benefit, index) => (
-                    <li key={index}>{benefit}</li>
-                  ))}
-                </ul>
-                <p>{pricing.price}</p>
-                <a href="#">{pricing.joinUrl}</a>
-              </li>
-            ))}
-          </ul>
+          <PricingGrid />
         </div>
       </section>
 
