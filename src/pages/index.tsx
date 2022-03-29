@@ -1,9 +1,12 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-import { FormspreeForm, ShowcaseGrid } from 'components';
-import { contributors } from 'values';
-import { PricingGrid } from 'components/pricing';
+import {
+  FormspreeForm,
+  ShowcaseGrid,
+  PricingGrid,
+  ContributorGrid,
+} from 'components';
 
 const Home: NextPage = () => {
   return (
@@ -80,15 +83,7 @@ const Home: NextPage = () => {
       >
         <div className="container">
           <h2 id="contributors-title">Contributors</h2>
-          <ul>
-            {contributors.map((contributor, index) => (
-              <li key={index} className="contributorCard">
-                <h3>{contributor.name}</h3>
-                <a href="">{contributor.githubUrl}</a>
-                <a href="">{contributor.extraUrl}</a>
-              </li>
-            ))}
-          </ul>
+          <ContributorGrid />
         </div>
       </section>
 
