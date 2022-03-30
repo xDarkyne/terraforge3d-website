@@ -19,3 +19,8 @@ export const discordServerUrl = 'https://discord.gg/dqCdjA4G4s';
  * recipient in the users default mail program.
  */
 export const developerEmailUrl = 'mailto:terraforge3d@gmail.com';
+
+/**
+ * Link to the available tiers on patreon.
+ */
+export const patreonUrl = 'https://patreon.com/jaysmito101';
