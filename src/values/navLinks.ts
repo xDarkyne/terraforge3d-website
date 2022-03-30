@@ -20,8 +20,8 @@ export const navLinks: INavLink[] = [
     destination: '#features',
   },
   {
-    value: 'Showcases',
-    destination: '#showcases',
+    value: 'Showcase',
+    destination: '#showcase',
   },
   {
     value: 'Pricing',
