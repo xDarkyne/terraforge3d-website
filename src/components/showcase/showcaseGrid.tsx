@@ -44,10 +44,12 @@ export const ShowcaseGrid: FunctionComponent = () => {
   };
 
   return (
-    <ul className={styles.showcaseGrid}>
-      {visibleShowcases.map((showcase, index) => (
-        <ShowcaseCard key={index} showcase={showcase} />
-      ))}
+    <>
+      <ul className={styles.showcaseGrid}>
+        {visibleShowcases.map((showcase, index) => (
+          <ShowcaseCard key={index} showcase={showcase} />
+        ))}
+      </ul>
       {canLoadMore ? (
         <button className="appBtn small" onClick={loadMore}>
           Load More
@@ -55,6 +57,6 @@ export const ShowcaseGrid: FunctionComponent = () => {
       ) : (
         <></>
       )}
-    </ul>
+    </>
   );
 };
