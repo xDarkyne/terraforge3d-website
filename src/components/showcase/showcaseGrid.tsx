@@ -49,7 +49,7 @@ export const ShowcaseGrid: FunctionComponent = () => {
         <ShowcaseCard key={index} showcase={showcase} />
       ))}
       {canLoadMore ? (
-        <button className="appBtn" onClick={loadMore}>
+        <button className="appBtn small" onClick={loadMore}>
           Load More
         </button>
       ) : (

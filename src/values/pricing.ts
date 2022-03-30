@@ -11,26 +11,50 @@ export interface IPricing {
 
 /**
  * Array containing pricing information.
- * Add/Remove displayed tiers here
+ * Add/Remove displayed tiers here.
+ *
+ * The current css rules don't account for
+ * more than three displayed tiers. So please
+ * always try to display three tiers while the
+ * highlighted on is in the middle of the list.
+ *
+ * If you want to fix the limitations feel free
+ * to submit a pull request.
  */
 export const pricing: IPricing[] = [
   {
-    tierName: 'Gold',
-    price: 8,
-    benefits: ['benefit 1', 'benefit 2', 'benefit 3'],
-    joinUrl: 'some url',
+    tierName: 'Bronze',
+    price: 2,
+    benefits: ['Patron-only updates', 'High Priority Support', 'Early access'],
+    joinUrl: 'https://www.patreon.com/jaysmito101',
   },
   {
-    tierName: 'Ultra',
-    price: 20,
-    benefits: ['benefit 1', 'benefit 2', 'benefit 3', 'benefit 4'],
-    joinUrl: 'some url',
+    tierName: 'Gold',
+    price: 8,
+    benefits: [
+      'Livestreams',
+      'Patron-only updates',
+      'Early access',
+      'Work-in-progress updates of TerraForge3D',
+      'High Priority Support',
+      'New Assets Weekly',
+      'Shout Out on Every YouTube Video & Website',
+      'Extra Special Nodes',
+    ],
+    joinUrl: 'https://www.patreon.com/jaysmito101',
     highlighted: true,
   },
   {
-    tierName: 'Pro',
-    price: 15,
-    benefits: ['benefit 1', 'benefit 2', 'benefit 3'],
-    joinUrl: 'some url',
+    tierName: 'Silver',
+    price: 4,
+    benefits: [
+      'Early access',
+      'Patron-only updates',
+      'High Priority Support',
+      'Weekly Builds Of TerraForge3D',
+      'New Assets Bi-Weekly',
+      'Shout Out on Website',
+    ],
+    joinUrl: 'https://www.patreon.com/jaysmito101',
   },
 ];

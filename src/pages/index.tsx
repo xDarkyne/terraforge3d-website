@@ -8,7 +8,7 @@ import {
   PricingGrid,
   ContributorGrid,
 } from 'components';
-import { discordServerUrl, developerEmailUrl } from 'values';
+import { discordServerUrl, developerEmailUrl, patreonUrl } from 'values';
 
 const Home: NextPage = () => {
   return (
@@ -73,7 +73,7 @@ const Home: NextPage = () => {
             <p>
               Add images on our{' '}
               <Link href={discordServerUrl}>discord server</Link> or{' '}
-              <Link href={developerEmailUrl}>email us.</Link>
+              <Link href={developerEmailUrl}>email us</Link>
             </p>
           </header>
           <ShowcaseGrid />
@@ -84,7 +84,9 @@ const Home: NextPage = () => {
         <div className="container">
           <header className="sectionHeader">
             <h2 id="pricing-title">Pricing</h2>
-            <p>Description</p>
+            <p>
+              Check out more tiers <Link href={patreonUrl}>on patreon</Link>
+            </p>
           </header>
           <PricingGrid />
         </div>

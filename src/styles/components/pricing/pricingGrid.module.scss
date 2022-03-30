@@ -1,0 +1,15 @@
+@import '../../mixins';
+
+.pricingGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
