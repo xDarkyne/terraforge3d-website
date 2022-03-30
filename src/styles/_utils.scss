@@ -2,8 +2,12 @@
 @import 'mixins';
 
 a {
-  color: inherit;
+  color: $brand-bg-primary;
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .container {

@@ -35,9 +35,11 @@
 
 .navLinks {
   a {
+    color: $fg-primary;
     font-weight: bold;
     border-bottom: 1px solid transparent;
     transition: border-color 250ms;
+    text-decoration: none;
 
     &:hover {
       border-color: $fg-selected;

@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
 import Image from 'next/image';
 import {
   FormspreeForm,
@@ -7,6 +8,7 @@ import {
   PricingGrid,
   ContributorGrid,
 } from 'components';
+import { discordServerUrl, developerEmailUrl } from 'values';
 
 const Home: NextPage = () => {
   return (
@@ -68,7 +70,11 @@ const Home: NextPage = () => {
         <div className="container">
           <header className="sectionHeader">
             <h2 id="showcase-title">Showcase</h2>
-            <p>Add images on discord</p>
+            <p>
+              Add images on our{' '}
+              <Link href={discordServerUrl}>discord server</Link> or{' '}
+              <Link href={developerEmailUrl}>email us.</Link>
+            </p>
           </header>
           <ShowcaseGrid />
         </div>
