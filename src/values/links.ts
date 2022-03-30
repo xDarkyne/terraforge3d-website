@@ -8,4 +8,14 @@
  * Don't forget to export your link here and also in the index.ts
  * file of this repository.
  */
+
+/**
+ * Self explanatory, the link to the terraforge3D discord server.
+ */
 export const discordServerUrl = 'https://discord.gg/dqCdjA4G4s';
+
+/**
+ * Hyperlink to open a new email with the terraforge dev as a
+ * recipient in the users default mail program.
+ */
+export const developerEmailUrl = 'mailto:terraforge3d@gmail.com';

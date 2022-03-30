@@ -16,4 +16,4 @@ export type { IPricing } from './pricing';
 export { showcases } from './showcases';
 export type { IShowcaseItem } from './showcases';
 
-export { discordServerUrl } from './links';
+export { discordServerUrl, developerEmailUrl } from './links';
