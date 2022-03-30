@@ -4,13 +4,19 @@
 
 /* MEDIA QUERIES */
 @mixin phone {
-  @media (max-width: 599px) {
+  @media (max-width: 699px) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (max-width: 899px) {
+  @media (min-width: 700px) and (max-width: 999px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1000px) {
     @content;
   }
 }

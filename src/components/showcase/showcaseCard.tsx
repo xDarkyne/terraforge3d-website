@@ -20,9 +20,13 @@ export const ShowcaseCard: FunctionComponent<IShowcaseProps> = ({
         placeholder="blur"
       />
       <div className={styles.showcaseCardBody}>
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <p>{author}</p>
+        <header>
+          <h3>{title}</h3>
+        </header>
+        <div className={styles.showcaseCardText}>
+          <p>{description}</p>
+          <p>{author}</p>
+        </div>
       </div>
     </li>
   );

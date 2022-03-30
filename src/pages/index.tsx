@@ -53,7 +53,10 @@ const Home: NextPage = () => {
         className="section"
       >
         <div className="container">
-          <h2 id="features-title">Features</h2>
+          <header className="sectionHeader">
+            <h2 id="features-title">Features</h2>
+            <p>Description</p>
+          </header>
         </div>
       </section>
 
@@ -63,15 +66,20 @@ const Home: NextPage = () => {
         className="section"
       >
         <div className="container">
-          <h2 id="showcase-title">Showcase</h2>
-          <p>Add images on discord</p>
+          <header className="sectionHeader">
+            <h2 id="showcase-title">Showcase</h2>
+            <p>Add images on discord</p>
+          </header>
           <ShowcaseGrid />
         </div>
       </section>
 
       <section aria-labelledby="pricing-title" id="pricing" className="section">
         <div className="container">
-          <h2 id="pricing-title">Pricing</h2>
+          <header className="sectionHeader">
+            <h2 id="pricing-title">Pricing</h2>
+            <p>Description</p>
+          </header>
           <PricingGrid />
         </div>
       </section>
@@ -82,14 +90,20 @@ const Home: NextPage = () => {
         className="section"
       >
         <div className="container">
-          <h2 id="contributors-title">Contributors</h2>
+          <header className="sectionHeader">
+            <h2 id="contributors-title">Contributors</h2>
+            <p>Description</p>
+          </header>
           <ContributorGrid />
         </div>
       </section>
 
       <section aria-labelledby="contact-title" id="contact" className="section">
         <div className="container">
-          <h2 id="contact-title">Contact us</h2>
+          <header className="sectionHeader">
+            <h2 id="contact-title">Contact us</h2>
+            <p>Description</p>
+          </header>
           <FormspreeForm formID="mknyjgkz" classNames={['contactForm']} />
         </div>
       </section>

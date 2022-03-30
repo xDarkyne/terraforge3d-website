@@ -10,14 +10,20 @@ $banner-height: 4rem;
 // default border radius (corner roundness) for most elements
 $border-radius: 0.25rem;
 
+$card-shadow: 0 2px 7px
+  rgba(
+    $color: #000,
+    $alpha: 0.85,
+  );
+
 /* COLORS */
-$bg-primary: #212121;
-$bg-secondary: #2e2e2e;
-$bg-tertiary: #121212;
+$bg-primary: #121212;
+$bg-secondary: #212121;
+$bg-tertiary: #2e2e2e;
 $bg-selected: #383838;
 
-$fg-primary: white;
-$fg-secondary: white;
+$fg-primary: #fefefe;
+$fg-secondary: #efefef;
 $fg-tertiary: white;
 $fg-selected: white;
 

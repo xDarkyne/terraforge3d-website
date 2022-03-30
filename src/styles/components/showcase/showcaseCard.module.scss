@@ -5,13 +5,26 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  box-shadow: $card-shadow;
 
   img {
     height: 100%;
     width: 100%;
+    aspect-ratio: 1;
   }
 
   .showcaseCardBody {
+    background-color: $bg-secondary;
     margin-top: auto;
+
+    header {
+      background-color: $bg-tertiary;
+      padding: 5px;
+    }
+
+    .showcaseCardText {
+      color: $fg-secondary;
+      padding: 5px;
+    }
   }
 }

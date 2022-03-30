@@ -1,8 +1,17 @@
 @import '../../variables';
+@import '../../mixins';
 
 .showcaseGrid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 15px;
   list-style: none;
+
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
