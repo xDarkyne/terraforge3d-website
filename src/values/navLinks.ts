@@ -28,6 +28,10 @@ export const navLinks: INavLink[] = [
     destination: '#pricing',
   },
   {
+    value: 'Downloads',
+    destination: '#downloads',
+  },
+  {
     value: 'Contributors',
     destination: '#contributors',
   },
