@@ -93,6 +93,18 @@ const Home: NextPage = () => {
       </section>
 
       <section
+        aria-labelledby="downloads-title"
+        id="downloads"
+        className="section"
+      >
+        <div className="container">
+          <header>
+            <h2 id="downloads-title">Downloads</h2>
+          </header>
+        </div>
+      </section>
+
+      <section
         aria-labelledby="contributors-title"
         id="contributors"
         className="section"
