@@ -12,22 +12,21 @@ export const PricingCard: FunctionComponent<IPricingCardProps> = ({ tier }) => {
     <li
       className={`${styles.pricingCard} ${
         tier.highlighted ? styles.highlighted : ''
-      }`}
+      } ${styles[tier.tierName.toLowerCase()]}`}
     >
+      <h3>{tier.tierName}</h3>
       <div className={styles.pricingBody}>
-        <h3>{tier.tierName}</h3>
         <h4>Benefits:</h4>
         <ul className={styles.benefits}>
           {tier.benefits.map((benefit, index) => (
             <li key={index}>{benefit}</li>
           ))}
         </ul>
-        <p className={styles.price}>Join for {tier.price}$!</p>
       </div>
       <footer className={styles.pricingFooter}>
         <Link href={tier.joinUrl}>
-          <a href="" className="appBtn full">
-            Buy
+          <a target="_blank" className="appBtn full">
+            {`Join for ${tier.price === 'free' ? 'free' : `${tier.price}$`}`}
           </a>
         </Link>
       </footer>

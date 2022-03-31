@@ -3,7 +3,7 @@
  */
 export interface IPricing {
   tierName: string;
-  price: number;
+  price: 'free' | number;
   benefits: string[];
   joinUrl: string;
   highlighted?: boolean;
@@ -17,6 +17,13 @@ export interface IPricing {
  * more than three displayed tiers. So please
  * always try to display three tiers while the
  * highlighted on is in the middle of the list.
+ *
+ * When adding tiers don't forget to add a class
+ * for it with background gradients under
+ * src/styles/components/pricing/pricingCard.module.scss
+ *
+ * for gradients check out
+ * https://www.eggradients.com
  *
  * If you want to fix the limitations feel free
  * to submit a pull request.

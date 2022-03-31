@@ -16,6 +16,48 @@
     border-width: 2px;
     border-color: $brand-bg-primary;
     box-shadow: 0 2px 7px 2px rgba($color: #000, $alpha: 0.95);
+
+    h3 {
+      font-size: 1.25rem;
+    }
+  }
+
+  /* TIERS */
+
+  /*
+  * when adding new tiers don't forget to add a class with gradients
+  * so it doesn't look out of place on the website.
+  */
+
+  &.silver {
+    h3 {
+      background-color: #b8c6db;
+      background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+    }
+  }
+
+  &.gold {
+    h3 {
+      background-color: #fec84e;
+      background-image: linear-gradient(315deg, #fec84e 0%, #ffdea8 74%);
+    }
+  }
+
+  &.bronze {
+    h3 {
+      background-color: #772f1a;
+      background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
+    }
+  }
+
+  h3 {
+    width: 100%;
+    padding: 20px 10px;
+    font-size: 1.15rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+    color: $fg-inverted;
   }
 
   .pricingBody {
@@ -24,14 +66,8 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-
-    h3 {
-      font-size: 1.15rem;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
 
     .benefits {
       list-style-position: inside;

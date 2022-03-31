@@ -1,9 +1,17 @@
 @import '../../mixins';
 
+.pricing {
+  p {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}
+
 .pricingGrid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
+  margin-bottom: 15px;
 
   @include tablet {
     grid-template-columns: repeat(3, 1fr);
