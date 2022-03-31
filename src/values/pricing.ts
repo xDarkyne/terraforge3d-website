@@ -30,10 +30,12 @@ export interface IPricing {
  */
 export const pricing: IPricing[] = [
   {
-    tierName: 'Bronze',
-    price: 2,
-    benefits: ['Patron-only updates', 'High Priority Support', 'Early access'],
-    joinUrl: 'https://www.patreon.com/jaysmito101',
+    tierName: 'Free',
+    price: 'free',
+    benefits: [
+      'Standard Support',
+    ],
+    joinUrl: '#downloads',
   },
   {
     tierName: 'Gold',
@@ -44,16 +46,17 @@ export const pricing: IPricing[] = [
       'Early access',
       'Work-in-progress updates of TerraForge3D',
       'High Priority Support',
-      'New Assets Weekly',
+      'Exclusive Assets Weekly',
       'Shout Out on Every YouTube Video & Website',
       'Extra Special Nodes',
+      'TerraForge3D Merch',
     ],
-    joinUrl: 'https://www.patreon.com/jaysmito101',
+    joinUrl: 'https://www.patreon.com/join/jaysmito101/checkout?rid=7732715',
     highlighted: true,
   },
   {
-    tierName: 'Silver',
-    price: 4,
+    tierName: 'Platinum',
+    price: 16,
     benefits: [
       'Early access',
       'Patron-only updates',
@@ -61,7 +64,10 @@ export const pricing: IPricing[] = [
       'Weekly Builds Of TerraForge3D',
       'New Assets Bi-Weekly',
       'Shout Out on Website',
+      'Custom Features on Demand',
+      'Shout Out on Application Start',
+      'Special TerraForge3D Merch',
     ],
-    joinUrl: 'https://www.patreon.com/jaysmito101',
+    joinUrl: 'https://www.patreon.com/join/jaysmito101/checkout?rid=7886688',
   },
 ];

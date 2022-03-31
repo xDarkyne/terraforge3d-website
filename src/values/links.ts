@@ -10,9 +10,9 @@
  */
 
 /**
- * Self explanatory, the link to the terraforge3D discord server.
+ * Self explanatory, the link to the TerraForge3D discord server.
  */
-export const discordServerUrl = 'https://discord.gg/dqCdjA4G4s';
+export const discordServerUrl = 'https://discord.gg/9ebyYwSktZ';
 
 /**
  * Hyperlink to open a new email with the terraforge dev as a

@@ -24,6 +24,8 @@ export const metaData: IMetaData = {
     'FOSS',
     'Open Source',
     'procedural terrain generation',
+    'gamedev',
+    'procedural shaders',
   ],
   author: 'xDarkyne',
 };

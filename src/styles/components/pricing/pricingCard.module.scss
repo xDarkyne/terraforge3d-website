@@ -50,6 +50,27 @@
     }
   }
 
+  &.free {
+    h3 {
+      background-color: #f8ceec;
+      background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+    }
+  }
+
+  &.platinum {
+    h3 {
+      background-color: #d9e4f5;
+      background-image: linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
+    }
+  }
+
+  &.diamond {
+    h3 {
+      background-color: #2a2a72;
+      background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+    }
+  }
+
   h3 {
     width: 100%;
     padding: 20px 10px;
