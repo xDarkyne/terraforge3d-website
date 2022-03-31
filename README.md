@@ -13,6 +13,7 @@
 1. Clone into the repository
 
    `git clone git@github.com:xDarkyne/terraforge3d-website.git`
+   
    `cd terraforge3d-website`
 
 2. Install dependencies
