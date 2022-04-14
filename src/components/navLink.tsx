@@ -8,10 +8,15 @@ interface INavLinkProps {
 
 export const NavLink: FunctionComponent<INavLinkProps> = ({ navLink }) => {
   const { value, destination } = navLink;
+  const external = !destination.startsWith('#');
 
   return (
     <li>
-      <Link href={destination}>{value}</Link>
+      <Link href={destination} passHref>
+        <a target={external ? '_blank' : '_self'} rel="noreferrer">
+          {value}
+        </a>
+      </Link>
     </li>
   );
 };

@@ -2,6 +2,29 @@
  * This file contains all mixins used for styling this site.
  */
 
+@mixin button {
+  height: fit-content;
+  width: fit-content;
+  appearance: none;
+  display: inline-block;
+  color: $fg-primary;
+  background-color: $brand-bg-primary;
+  border: none;
+  border-radius: $border-radius;
+  box-shadow: $shadow-light;
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 0.075ch;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 250ms ease-out;
+
+  &:hover {
+    background-color: $brand-bg-secondary;
+    text-decoration: none;
+  }
+}
+
 /* MEDIA QUERIES */
 @mixin phone {
   @media (max-width: 699px) {

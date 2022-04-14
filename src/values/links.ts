@@ -24,3 +24,8 @@ export const developerEmailUrl = 'mailto:terraforge3d@gmail.com';
  * Link to the available tiers on patreon.
  */
 export const patreonUrl = 'https://patreon.com/jaysmito101';
+
+/**
+ * Link to the official github Repository.
+ */
+export const githubUrl = 'https://github.com/Jaysmito101/TerraForge3D';

@@ -32,10 +32,8 @@ export const pricing: IPricing[] = [
   {
     tierName: 'Free',
     price: 'free',
-    benefits: [
-      'Standard Support',
-    ],
-    joinUrl: '#downloads',
+    benefits: ['Standard Support'],
+    joinUrl: '#Downloads',
   },
   {
     tierName: 'Gold',

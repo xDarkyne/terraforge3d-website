@@ -1,3 +1,5 @@
+import { discordServerUrl, githubUrl } from './links';
+
 /**
  * This interface is just for type-safety and a better developer-experience.
  */
@@ -13,42 +15,42 @@ export interface INavLink {
 export const navLinks: INavLink[] = [
   {
     value: 'Home',
-    destination: '#home',
+    destination: '#Home',
   },
   {
     value: 'Features',
-    destination: '#features',
+    destination: '#Features',
   },
   {
     value: 'Showcase',
-    destination: '#showcase',
+    destination: '#Showcase',
   },
   {
     value: 'Pricing',
-    destination: '#pricing',
+    destination: '#Pricing',
   },
   {
     value: 'Downloads',
-    destination: '#downloads',
+    destination: '#Downloads',
   },
   {
     value: 'Contributors',
-    destination: '#contributors',
+    destination: '#Contributors',
   },
   {
     value: 'Contact',
-    destination: '#contact',
+    destination: '#Contact',
   },
   {
     value: 'Docs',
-    destination: '#docs',
+    destination: '#Docs',
   },
   {
     value: 'Github',
-    destination: '#github',
+    destination: githubUrl,
   },
   {
     value: 'Discord',
-    destination: '#discord',
+    destination: discordServerUrl,
   },
 ];

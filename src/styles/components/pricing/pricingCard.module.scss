@@ -16,10 +16,23 @@
     border-width: 2px;
     border-color: $brand-bg-primary;
     box-shadow: 0 2px 7px 2px rgba($color: #000, $alpha: 0.95);
+    transform: translateY(-15px);
+
+    @include phone {
+      transform: none;
+    }
 
     h3 {
       font-size: 1.25rem;
     }
+  }
+
+  .highlightedBanner {
+    width: 100%;
+    background-color: $brand-bg-primary;
+    color: $fg-primary;
+    padding: 7px;
+    text-transform: uppercase;
   }
 
   /* TIERS */

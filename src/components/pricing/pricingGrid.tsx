@@ -12,9 +12,6 @@ export const PricingGrid: FunctionComponent = () => {
           <PricingCard key={index} tier={tier} />
         ))}
       </ul>
-      <p>
-        or <Link href="#downloads">download for free</Link>
-      </p>
     </div>
   );
 };

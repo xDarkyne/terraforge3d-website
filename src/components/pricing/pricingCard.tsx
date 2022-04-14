@@ -14,6 +14,9 @@ export const PricingCard: FunctionComponent<IPricingCardProps> = ({ tier }) => {
         tier.highlighted ? styles.highlighted : ''
       } ${styles[tier.tierName.toLowerCase()]}`}
     >
+      {tier.highlighted && (
+        <p className={styles.highlightedBanner}>Highlighted</p>
+      )}
       <h3>{tier.tierName}</h3>
       <div className={styles.pricingBody}>
         <h4>Benefits:</h4>
@@ -25,7 +28,11 @@ export const PricingCard: FunctionComponent<IPricingCardProps> = ({ tier }) => {
       </div>
       <footer className={styles.pricingFooter}>
         <Link href={tier.joinUrl}>
-          <a target="_blank" className="appBtn full">
+          <a
+            target={tier.price != 'free' ? '_blank' : '_self'}
+            rel="noreferrer"
+            className="appBtn full"
+          >
             {`Join for ${tier.price === 'free' ? 'free' : `${tier.price}$`}`}
           </a>
         </Link>

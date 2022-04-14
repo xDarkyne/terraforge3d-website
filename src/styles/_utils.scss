@@ -12,25 +12,12 @@ a {
 
 .container {
   height: 100%;
-  max-width: $max-width;
-  margin: 0 auto;
+  width: min(100%, $max-width);
+  margin-inline: auto;
   padding: 0 20px;
 
   @include phone {
     padding: 0 10px;
-  }
-}
-
-.section {
-  scroll-margin-top: $banner-height;
-
-  .sectionHeader {
-    margin: 20px 0 10px 0;
-
-    h2 {
-      font-size: 2rem;
-      font-weight: bold;
-    }
   }
 }
 
@@ -46,26 +33,7 @@ a {
 }
 
 .appBtn {
-  height: fit-content;
-  width: fit-content;
-  display: inline-block;
-  color: $fg-primary;
-  background-color: $brand-bg-primary;
-  border-radius: $border-radius;
-  box-shadow: $shadow-light;
-  font-weight: bold;
-  font-size: 1.2rem;
-  letter-spacing: 0.075ch;
-  padding: 10px 15px;
-  cursor: pointer;
-  appearance: none;
-  border: none;
-
-  transition: background-color 250ms ease-out;
-
-  &:hover {
-    background-color: $brand-bg-secondary;
-  }
+  @include button;
 
   &.small {
     padding: 5px 12px;

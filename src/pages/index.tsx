@@ -7,8 +7,15 @@ import {
   ShowcaseGrid,
   PricingGrid,
   ContributorGrid,
+  DownloadSection,
+  Section,
 } from 'components';
-import { discordServerUrl, developerEmailUrl, patreonUrl } from 'values';
+import {
+  discordServerUrl,
+  developerEmailUrl,
+  patreonUrl,
+  githubUrl,
+} from 'values';
 
 const Home: NextPage = () => {
   return (
@@ -18,7 +25,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section aria-labelledby="home-title" id="home">
+      <section aria-labelledby="home-title" id="Home">
         <Image
           src={require('../../public/images/home.png')}
           layout="fill"
@@ -34,13 +41,23 @@ const Home: NextPage = () => {
               <p>Procedural terrain generation.</p>
               <p>Amazing, flexible, open source.</p>
               <div className="hero-flex-row">
-                <a className="appBtn" href="#">
+                <a className="appBtn" href="#Downloads">
                   Download now
                 </a>
-                <a className="appBtn" href="#">
+                <a
+                  className="appBtn"
+                  target="_blank"
+                  rel="noreferrer"
+                  href={githubUrl}
+                >
                   Star us on GitHub
                 </a>
-                <a className="appBtn" href="#">
+                <a
+                  className="appBtn"
+                  target="_blank"
+                  rel="noreferrer"
+                  href={discordServerUrl}
+                >
                   Join us on Discord!
                 </a>
               </div>
@@ -49,84 +66,43 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      <section
-        aria-labelledby="features-title"
-        id="features"
-        className="section"
+      <Section name="Features" description="Description"></Section>
+
+      <Section
+        name="Showcase"
+        description={
+          <>
+            Add images on our{' '}
+            <Link href={discordServerUrl}>discord server</Link> or{' '}
+            <Link href={developerEmailUrl}>email us</Link>
+          </>
+        }
       >
-        <div className="container">
-          <header className="sectionHeader">
-            <h2 id="features-title">Features</h2>
-            <p>Description</p>
-          </header>
-        </div>
-      </section>
+        <ShowcaseGrid />
+      </Section>
 
-      <section
-        aria-labelledby="showcase-title"
-        id="showcase"
-        className="section"
+      <Section
+        name="Pricing"
+        description={
+          <>
+            Check out more tiers <Link href={patreonUrl}>on patreon</Link>
+          </>
+        }
       >
-        <div className="container">
-          <header className="sectionHeader">
-            <h2 id="showcase-title">Showcase</h2>
-            <p>
-              Add images on our{' '}
-              <Link href={discordServerUrl}>discord server</Link> or{' '}
-              <Link href={developerEmailUrl}>email us</Link>
-            </p>
-          </header>
-          <ShowcaseGrid />
-        </div>
-      </section>
+        <PricingGrid />
+      </Section>
 
-      <section aria-labelledby="pricing-title" id="pricing" className="section">
-        <div className="container">
-          <header className="sectionHeader">
-            <h2 id="pricing-title">Pricing</h2>
-            <p>
-              Check out more tiers <Link href={patreonUrl}>on patreon</Link>
-            </p>
-          </header>
-          <PricingGrid />
-        </div>
-      </section>
+      <Section name="Downloads" description="Description">
+        <DownloadSection />
+      </Section>
 
-      <section
-        aria-labelledby="downloads-title"
-        id="downloads"
-        className="section"
-      >
-        <div className="container">
-          <header>
-            <h2 id="downloads-title">Downloads</h2>
-          </header>
-        </div>
-      </section>
+      <Section name="Contributors" description="Contributors">
+        <ContributorGrid />
+      </Section>
 
-      <section
-        aria-labelledby="contributors-title"
-        id="contributors"
-        className="section"
-      >
-        <div className="container">
-          <header className="sectionHeader">
-            <h2 id="contributors-title">Contributors</h2>
-            <p>Description</p>
-          </header>
-          <ContributorGrid />
-        </div>
-      </section>
-
-      <section aria-labelledby="contact-title" id="contact" className="section">
-        <div className="container">
-          <header className="sectionHeader">
-            <h2 id="contact-title">Contact us</h2>
-            <p>Description</p>
-          </header>
-          <FormspreeForm formID="mknyjgkz" classNames={['contactForm']} />
-        </div>
-      </section>
+      <Section name="Contact us" id="Contact" description="Description">
+        <FormspreeForm formID="mknyjgkz" classNames={['contactForm']} />
+      </Section>
     </>
   );
 };

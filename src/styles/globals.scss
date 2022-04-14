@@ -18,7 +18,6 @@ main {
   background-color: $bg-primary;
   color: $fg-primary;
   height: 100%;
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -28,7 +27,16 @@ main {
   box-sizing: border-box;
 }
 
-#home {
+main {
+  height: max-content;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+}
+
+#Home {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -98,5 +106,50 @@ main {
 
   input[type='submit'] {
     width: fit-content;
+  }
+}
+
+.tab-buttons {
+  width: 100%;
+  display: flex;
+  border-radius: 100px;
+  padding: 10px;
+  background-color: $bg-tertiary;
+  overflow: hidden;
+
+  .tab-button {
+    flex: 1;
+    background-color: $bg-secondary;
+    color: $fg-primary;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    appearance: none;
+    cursor: pointer;
+    transition: background-color 90ms ease-out;
+
+    &:first-child {
+      border-top-left-radius: 100px;
+      border-bottom-left-radius: 100px;
+      border-right: 1px solid dimgray;
+    }
+    &:last-child {
+      border-top-right-radius: 100px;
+      border-bottom-right-radius: 100px;
+      border-left: 1px solid dimgray;
+    }
+
+    &.active {
+      background-color: $brand-bg-primary;
+    }
+  }
+}
+
+.platform {
+  display: none;
+
+  &.visible {
+    display: block;
   }
 }

@@ -1,0 +1,15 @@
+@import '../variables';
+
+.section {
+  scroll-margin-top: $banner-height;
+  margin: 25px 0;
+
+  .sectionHeader {
+    margin: 20px 0 20px 0;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+}

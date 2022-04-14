@@ -1,8 +1,14 @@
 export { contributors } from './contributors';
 export type { IContributor } from './contributors';
 
-export { downloads } from './downloads';
-export type { IDownload, IDownloads } from './downloads';
+export { downloads, Platforms } from './downloads';
+export type {
+  IDownload,
+  IDownloads,
+  Platform,
+  Architecture,
+  DownloadType,
+} from './downloads';
 
 export { metaData } from './meta';
 export type { IMetaData } from './meta';
@@ -16,4 +22,9 @@ export type { IPricing } from './pricing';
 export { showcases } from './showcases';
 export type { IShowcaseItem } from './showcases';
 
-export { discordServerUrl, developerEmailUrl, patreonUrl } from './links';
+export {
+  discordServerUrl,
+  developerEmailUrl,
+  patreonUrl,
+  githubUrl,
+} from './links';

@@ -1,0 +1,1 @@
+export { getOperatingSystem } from './getOperatingSystem';
