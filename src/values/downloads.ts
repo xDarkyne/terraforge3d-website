@@ -23,7 +23,7 @@ export type Architecture = 'x86' | 'arm';
  * having too many primary downloads. Keep empty or 'SDK'
  * to appear in the 'others' section.
  */
-export type DownloadType = 'Primary' | 'Primary SDK' | 'SDK';
+export type DownloadType = 'Primary' | 'Primary SDK' | '' | 'SDK';
 
 /**
  * interface used for other downloads and older versions.
@@ -33,6 +33,7 @@ export interface IDownload {
   version: string;
   platform: Platform;
   architecture: Architecture;
+  type: DownloadType;
 }
 
 /**
@@ -54,12 +55,28 @@ export const downloads: IDownloads = {
       url: 'https://github.com/Jaysmito101/TerraForge3D/releases/download/v2.3/TerraForge3D.Linux.tar.gz',
       platform: 'Linux',
       architecture: 'x86',
+      type: 'Primary',
     },
     {
       version: 'Linux SDK v.0.x',
       url: 'https://github.com/Jaysmito101/TerraForge3D/releases/download/v2.3/TerraForge3D.SDK.Linux.tar.gz',
       platform: 'Linux',
       architecture: 'x86',
+      type: 'Primary SDK',
+    },
+    {
+      version: 'Linux v.0.old',
+      url: 'https://github.com/Jaysmito101/TerraForge3D/releases/download/v2.3/TerraForge3D.Linux.tar.gz',
+      platform: 'Linux',
+      architecture: 'x86',
+      type: '',
+    },
+    {
+      version: 'Linux SDK v.0.old',
+      url: 'https://github.com/Jaysmito101/TerraForge3D/releases/download/v2.3/TerraForge3D.SDK.Linux.tar.gz',
+      platform: 'Linux',
+      architecture: 'x86',
+      type: 'SDK',
     },
   ],
   windows: [
@@ -68,12 +85,14 @@ export const downloads: IDownloads = {
       url: 'https://github.com/Jaysmito101/TerraForge3D/releases/download/v2.3/TerraForge3D.SDK.Win64.zip',
       platform: 'Windows',
       architecture: 'x86',
+      type: 'Primary',
     },
     {
       version: 'Windows SDK v.0.x',
       url: 'https://github.com/Jaysmito101/TerraForge3D/releases/download/v2.3/TerraForge3D.Win64.zip',
       platform: 'Windows',
       architecture: 'x86',
+      type: 'Primary SDK',
     },
   ],
   mac: [],
