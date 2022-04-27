@@ -1,4 +1,4 @@
-import styles from 'styles/components/downloads/DownloadSection.module.scss';
+import styles from 'styles/components/downloads/downloadSection.module.scss';
 import { FunctionComponent } from 'react';
 import { useEffect, useState } from 'react';
 import { getOperatingSystem } from 'lib';
