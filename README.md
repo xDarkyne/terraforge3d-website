@@ -1,6 +1,4 @@
-<div>
-  <h1>Terraforge3D Website</h1>
-</div>
+# Terraforge3D Website
 
 [Live Demo](https://xdarkyne.github.io/terraforge3d-website/)
 
