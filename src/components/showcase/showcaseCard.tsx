@@ -1,7 +1,8 @@
 import styles from 'styles/components/showcase/showcaseCard.module.scss';
 import { FunctionComponent } from 'react';
 import Image from 'next/image';
-import { IShowcaseItem } from 'values';
+import { IShowcaseItem, IContributor } from 'values';
+import Link from 'next/link';
 
 interface IShowcaseProps {
   showcase: IShowcaseItem;
@@ -25,7 +26,7 @@ export const ShowcaseCard: FunctionComponent<IShowcaseProps> = ({
         </header>
         <div className={styles.showcaseCardText}>
           <p>{description}</p>
-          <p>{author}</p>
+          { typeof author == 'string' ? <p>{author}</p> : <Link href={author.githubUrl}>{author.name}</Link> }
         </div>
       </div>
     </li>

@@ -18,13 +18,13 @@
     margin-top: auto;
 
     header {
-      background-color: $bg-tertiary;
-      padding: 5px;
+      padding: 10px;
     }
 
     .showcaseCardText {
+      background-color: $bg-primary;
       color: $fg-secondary;
-      padding: 5px;
+      padding: 10px;
     }
   }
 }

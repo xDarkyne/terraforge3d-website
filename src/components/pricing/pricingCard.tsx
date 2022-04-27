@@ -15,7 +15,7 @@ export const PricingCard: FunctionComponent<IPricingCardProps> = ({ tier }) => {
       } ${styles[tier.tierName.toLowerCase()]}`}
     >
       {tier.highlighted && (
-        <p className={styles.highlightedBanner}>Highlighted</p>
+        <p className={styles.highlightedBanner}>Recommended</p>
       )}
       <h3>{tier.tierName}</h3>
       <div className={styles.pricingBody}>

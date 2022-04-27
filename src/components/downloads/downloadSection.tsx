@@ -1,3 +1,4 @@
+import styles from 'styles/components/downloads/DownloadSection.module.scss';
 import { FunctionComponent } from 'react';
 import { useEffect, useState } from 'react';
 import { getOperatingSystem } from 'lib';
@@ -13,12 +14,12 @@ export const DownloadSection: FunctionComponent = () => {
   }, []);
 
   return (
-    <div className="downloads">
-      <div className="tab-buttons">
+    <div className={styles.downloads}>
+      <div className={styles.tabButtons}>
         {Platforms.map((platform, index) => (
           <button
             key={index}
-            className={`tab-button ${activeTab === platform ? 'active' : ''}`}
+            className={`${styles.tabButton} ${activeTab === platform ? styles.active : ''}`}
             onClick={() => {
               setActiveTab(platform);
             }}
@@ -33,38 +34,39 @@ export const DownloadSection: FunctionComponent = () => {
         const dl: IDownload[] =
           Object.getOwnPropertyDescriptor(downloads, platformName)?.value ?? [];
         const otherDownloads = dl.filter(
-          (download) => !download.type.includes('Primary')
+          (download) => !download.type.includes('Latest')
         );
 
         return (
           <div
             key={index}
-            className={`platform ${platform} ${
-              activeTab === platform ? 'visible' : ''
+            className={`${styles.platform} ${
+              activeTab === platform ? styles.visible : ''
             }`}
           >
             {dl.length > 0 ? (
               <>
-                <ul className="downloadsGrid">
+                <ul className={styles.downloadsGrid}>
                   {dl.map((download, index) => {
-                    if (download.type.includes('Primary')) {
+                    if (download.type.includes('Latest')) {
                       return <DownloadCard download={download} key={index} />;
                     }
                   })}
                 </ul>
                 {otherDownloads && (
-                  <p>
+                  <p className={styles.otherDownloads}>
                     For older version checkout the{' '}
                     <Link
                       href={'https://github.com/Jaysmito101/TerraForge3D/tags'}
                     >
                       GitHub page
                     </Link>
+                    .
                   </p>
                 )}
               </>
             ) : (
-              <p>There are no downloads for this platform :(</p>
+              <p className={styles.noDownloads}>There are no downloads for this platform (yet) 😭</p>
             )}
           </div>
         );

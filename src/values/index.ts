@@ -1,4 +1,4 @@
-export { contributors } from './contributors';
+export { contributors, getContributor } from './contributors';
 export type { IContributor } from './contributors';
 
 export { downloads, Platforms } from './downloads';

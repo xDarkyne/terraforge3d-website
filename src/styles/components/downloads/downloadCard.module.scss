@@ -1,0 +1,42 @@
+@import '../../variables';
+@import '../../mixins';
+
+.downloadCard {
+  background-color: $bg-secondary;
+  display: flex;
+  flex-direction: column;
+  border-radius: $border-radius;
+  overflow: hidden;
+
+  .downloadBody {
+    padding: 15px 10px 0 10px;
+    margin-bottom: 10px;
+  }
+
+  .downloadButton {
+    @include button;
+    margin-top: 5px;
+    padding: 2.5px 5px;
+  }
+
+  .downloadFooter {
+    background-color: $bg-primary;
+    padding: 15px 10px 15px 10px;
+  }
+
+  .downloadTags {
+    display: flex;
+    gap: 5px;
+    list-style: none;
+  
+    li {
+      background-color: lightgray;
+      font-weight: bold;
+      font-size: 0.85rem;
+      color: $bg-tertiary;
+      border-radius: $border-radius;
+      padding: 2.5px 5px;
+      box-shadow: 0 0 5px 0 rgba($color: #fefefe, $alpha: 0.75);
+    }
+  }
+}

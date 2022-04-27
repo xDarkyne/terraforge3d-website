@@ -6,7 +6,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
   list-style: none;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 
   @include tablet {
     grid-template-columns: repeat(3, 1fr);
@@ -15,4 +15,10 @@
   @include desktop {
     grid-template-columns: repeat(5, 1fr);
   }
+}
+
+.loadMore {
+  width: 100%;
+  display: grid;
+  place-items: center;
 }

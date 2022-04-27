@@ -51,9 +51,11 @@ export const ShowcaseGrid: FunctionComponent = () => {
         ))}
       </ul>
       {canLoadMore ? (
-        <button className="appBtn small" onClick={loadMore}>
-          Load More
-        </button>
+        <div className={styles.loadMore}>
+          <button className="appBtn small" onClick={loadMore}>
+            Load More
+          </button>
+        </div>
       ) : (
         <></>
       )}

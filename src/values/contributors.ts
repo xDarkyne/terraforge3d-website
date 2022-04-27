@@ -17,7 +17,13 @@ export const contributors: IContributor[] = [
   {
     name: 'Darkyne',
     avatar: 'some avatar url',
-    githubUrl: 'github url',
+    githubUrl: 'https://github.com/xdarkyne',
     extraUrl: 'any custom url like personal website, etc',
   },
 ];
+
+export function getContributor(name: string): IContributor {
+  let contributor = contributors.find((p) => p.name.toLowerCase() == name.toLowerCase());
+  if (!contributor) throw new Error('Could not find contributor with name '+name);
+  return contributor;
+}

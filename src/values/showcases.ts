@@ -1,3 +1,5 @@
+import { IContributor, getContributor } from './contributors';
+
 /**
  * To add a possible showcase type attach it to the end of this list.
  * Remember, removing a type will invalidate every entry with this type
@@ -12,7 +14,7 @@ export interface IShowcaseItem {
   imageUrl: string;
   title: string;
   description: string;
-  author: string;
+  author: IContributor | string;
   type: ShowcaseType;
 }
 
@@ -33,7 +35,7 @@ export const showcases: IShowcaseItem[] = [
     imageUrl: '/showcase/Snowy_Hills.png',
     title: 'some title',
     description: 'some description',
-    author: 'xDarkyne',
+    author: getContributor('darkyne'),
     type: 'Cinematic',
   },
   {
