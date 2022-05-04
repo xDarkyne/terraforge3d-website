@@ -8,7 +8,7 @@
 
   .tabButton {
     flex: 1;
-    background-color: $bg-secondary;
+    background-color: $bg-tertiary;
     color: $fg-primary;
     font-size: 1.25rem;
     font-weight: bold;
@@ -36,7 +36,7 @@
 .platform {
   display: none;
   padding: 15px 10px 10px 10px;
-  background-color: $bg-tertiary;
+  background-color: $bg-secondary;
   border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
   box-shadow: $card-shadow;
@@ -50,12 +50,12 @@
 .downloadsGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 15px;
   list-style: none;
 }
 
 .otherDownloads {
-  margin: 10px 0;
+  margin: 15px 0 10px 0;
 }
 
 .noDownloads {
