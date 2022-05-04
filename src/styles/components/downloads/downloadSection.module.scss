@@ -14,17 +14,17 @@
     font-weight: bold;
     padding: 10px;
     border: none;
-    border-top-right-radius: $border-radius;
-    border-top-left-radius: $border-radius;
     appearance: none;
     cursor: pointer;
     transition: background-color 90ms ease-out;
 
     &:first-child {
-      border-right: 1px solid $bg-tertiary;
+      border-top-left-radius: $border-radius;
+      border-right: 1px solid dimgray;
     }
     &:last-child {
-      border-left: 1px solid $bg-tertiary;
+      border-top-right-radius: $border-radius;
+      border-left: 1px solid dimgray;
     }
 
     &.active {
@@ -50,7 +50,7 @@
 .downloadsGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+  gap: 10px;
   list-style: none;
 }
 
