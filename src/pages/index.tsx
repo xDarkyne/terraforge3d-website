@@ -15,6 +15,7 @@ import {
   developerEmailUrl,
   patreonUrl,
   githubUrl,
+  githubDownloadsUrl,
 } from 'values';
 
 const Home: NextPage = () => {
@@ -92,7 +93,15 @@ const Home: NextPage = () => {
         <PricingGrid />
       </Section>
 
-      <Section name="Downloads" description="Description">
+      <Section
+        name="Downloads"
+        description={
+          <>
+            Checkout latest or downloads or browse older ones on{' '}
+            <Link href={githubDownloadsUrl}>GitHub</Link>
+          </>
+        }
+      >
         <DownloadSection />
       </Section>
 

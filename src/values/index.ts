@@ -27,4 +27,5 @@ export {
   developerEmailUrl,
   patreonUrl,
   githubUrl,
+  githubDownloadsUrl,
 } from './links';

@@ -29,3 +29,9 @@ export const patreonUrl = 'https://patreon.com/jaysmito101';
  * Link to the official github Repository.
  */
 export const githubUrl = 'https://github.com/Jaysmito101/TerraForge3D';
+
+/**
+ * Link to all downloads on github
+ */
+export const githubDownloadsUrl =
+  'https://github.com/Jaysmito101/TerraForge3D/tags';

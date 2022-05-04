@@ -1,23 +1,10 @@
 @import '../../variables';
 
-.downloads {
-  background-color: $bg-tertiary;
-}
-
-.downloadsGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  list-style: none;
-}
-
 .tabButtons {
   width: 100%;
   display: flex;
-  border-radius: $border-radius;
-  padding: 5px;
-  background-color: $bg-tertiary;
-  overflow: hidden;
+  box-shadow: $card-shadow;
+  position: relative;
 
   .tabButton {
     flex: 1;
@@ -27,18 +14,16 @@
     font-weight: bold;
     padding: 10px;
     border: none;
+    border-top-right-radius: $border-radius;
+    border-top-left-radius: $border-radius;
     appearance: none;
     cursor: pointer;
     transition: background-color 90ms ease-out;
 
     &:first-child {
-      border-top-left-radius: $border-radius;
-      border-bottom-left-radius: $border-radius;
       border-right: 1px solid $bg-tertiary;
     }
     &:last-child {
-      border-top-right-radius: $border-radius;
-      border-bottom-right-radius: $border-radius;
       border-left: 1px solid $bg-tertiary;
     }
 
@@ -50,11 +35,23 @@
 
 .platform {
   display: none;
-  padding: 5px;
+  padding: 15px 10px 10px 10px;
+  background-color: $bg-tertiary;
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+  box-shadow: $card-shadow;
+  z-index: 1;
 
   &.visible {
     display: block;
   }
+}
+
+.downloadsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  list-style: none;
 }
 
 .otherDownloads {

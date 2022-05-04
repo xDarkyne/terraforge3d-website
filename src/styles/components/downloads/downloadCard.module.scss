@@ -7,6 +7,7 @@
   flex-direction: column;
   border-radius: $border-radius;
   overflow: hidden;
+  box-shadow: $card-shadow;
 
   .downloadBody {
     padding: 15px 10px 0 10px;
@@ -15,8 +16,9 @@
 
   .downloadButton {
     @include button;
-    margin-top: 5px;
+    margin-top: 10px;
     padding: 2.5px 5px;
+    box-shadow: $card-shadow;
   }
 
   .downloadFooter {
@@ -28,15 +30,15 @@
     display: flex;
     gap: 5px;
     list-style: none;
-  
+
     li {
       background-color: lightgray;
       font-weight: bold;
       font-size: 0.85rem;
       color: $bg-tertiary;
+      border: 1px solid darken($color: lightgray, $amount: 50);
       border-radius: $border-radius;
       padding: 2.5px 5px;
-      box-shadow: 0 0 5px 0 rgba($color: #fefefe, $alpha: 0.75);
     }
   }
 }
