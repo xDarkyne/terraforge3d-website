@@ -16,14 +16,89 @@ export interface IContributor {
 export const contributors: IContributor[] = [
   {
     name: 'Darkyne',
-    avatar: 'some avatar url',
+    avatar: '/darkyne.jpg',
     githubUrl: 'https://github.com/xdarkyne',
-    extraUrl: 'any custom url like personal website, etc',
+    extraUrl: 'https://darkyne.com',
+  },
+  {
+    name: 'Darkyne',
+    avatar: '/darkyne.jpg',
+    githubUrl: 'https://github.com/xdarkyne',
+    extraUrl: 'https://darkyne.com',
+  },
+  {
+    name: 'Darkyne',
+    avatar: '/darkyne.jpg',
+    githubUrl: 'https://github.com/xdarkyne',
+    extraUrl: 'https://darkyne.com',
+  },
+  {
+    name: 'Darkyne',
+    avatar: '/darkyne.jpg',
+    githubUrl: 'https://github.com/xdarkyne',
+    extraUrl: 'https://darkyne.com',
+  },
+  {
+    name: 'Darkyne',
+    avatar: '/darkyne.jpg',
+    githubUrl: 'https://github.com/xdarkyne',
+    extraUrl: 'https://darkyne.com',
+  },
+  {
+    name: 'Darkyne',
+    avatar: '/darkyne.jpg',
+    githubUrl: 'https://github.com/xdarkyne',
+    extraUrl: 'https://darkyne.com',
+  },
+  {
+    name: 'Darkyne',
+    avatar: '/darkyne.jpg',
+    githubUrl: 'https://github.com/xdarkyne',
+    extraUrl: 'https://darkyne.com',
+  },
+  {
+    name: 'Darkyne',
+    avatar: '/darkyne.jpg',
+    githubUrl: 'https://github.com/xdarkyne',
+    extraUrl: 'https://darkyne.com',
+  },
+  {
+    name: 'Darkyne',
+    avatar: '/darkyne.jpg',
+    githubUrl: 'https://github.com/xdarkyne',
+    extraUrl: 'https://darkyne.com',
+  },
+  {
+    name: 'Darkyne',
+    avatar: '/darkyne.jpg',
+    githubUrl: 'https://github.com/xdarkyne',
+    extraUrl: 'https://darkyne.com',
+  },
+  {
+    name: 'Darkyne',
+    avatar: '/darkyne.jpg',
+    githubUrl: 'https://github.com/xdarkyne',
+    extraUrl: 'https://darkyne.com',
+  },
+  {
+    name: 'Darkyne',
+    avatar: '/darkyne.jpg',
+    githubUrl: 'https://github.com/xdarkyne',
+    extraUrl: 'https://darkyne.com',
+  },
+  {
+    name: 'Darkyne',
+    avatar: '/darkyne.jpg',
+    githubUrl: 'https://github.com/xdarkyne',
+    extraUrl: 'https://darkyne.com',
   },
 ];
 
 export function getContributor(name: string): IContributor {
-  let contributor = contributors.find((p) => p.name.toLowerCase() == name.toLowerCase());
-  if (!contributor) throw new Error('Could not find contributor with name '+name);
+  let contributor = contributors.find(
+    (p) => p.name.toLowerCase() == name.toLowerCase()
+  );
+  if (!contributor)
+    throw new Error('Could not find contributor with name ' + name);
   return contributor;
 }

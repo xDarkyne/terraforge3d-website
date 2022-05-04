@@ -1,0 +1,36 @@
+@import '../../variables';
+
+.card {
+  $padding: 15px;
+
+  display: flex;
+  background-color: $bg-secondary;
+  flex-direction: column;
+  border-radius: $border-radius;
+  box-shadow: $card-shadow;
+
+  .cardBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: $padding;
+
+    .image {
+      display: flex;
+      width: 126px;
+      border-radius: 100px;
+      overflow: hidden;
+      margin-bottom: 5px;
+    }
+
+    h3 {
+      font-size: 1.35rem;
+    }
+  }
+
+  .cardFooter {
+    background-color: $bg-primary;
+    padding: $padding;
+  }
+}

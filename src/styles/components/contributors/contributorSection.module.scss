@@ -1,0 +1,14 @@
+@import '../../mixins';
+
+.grid {
+  display: grid;
+  gap: 15px;
+
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
